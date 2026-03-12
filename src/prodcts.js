@@ -79,7 +79,7 @@ export default function Products({ sellectedCategory, setSellectedCategory }) {
         className='py-5'
         style={{ direction: "rtl", width: "100vw" }}>
         <Helmet>
-          <title>{`منتجات  - مكتبة الكرم`}</title>
+          <title>{`مكتبة الكرم`}</title>
           <meta
             name='description'
             content={`اشتري الآن  بأفضل الأسعار من مكتبة الكرم. توصيل سريع لكل محافظات العراق.`}
