@@ -1,9 +1,9 @@
 /** @format */
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import Location from "./location";
 import Contact from "./contact";
+import { Helmet } from 'react-helmet-async';
 import { Navbar, Nav, Container, Row, Col, Button } from "react-bootstrap";
 import {
   ShoppingCart,
@@ -16,6 +16,11 @@ import {
   Image,
   Flower,
   Sticker,
+  Facebook,
+  Instagram,
+  Send,
+  Linkedin,
+  MessageCircle,
 } from "lucide-react";
 import OurWork from "./ourworks";
 import Openions from "./openions";
@@ -38,6 +43,10 @@ const App = () => {
   const [sellectedCategory, setSellectedCategory] = useState("الكل");
   return (
     <CartContext.Provider value={{ cartItems, setCartItems }}>
+      <Helmet>
+        <title>مكتبة الكرم | الصفحة الرئيسية - قرطاسية وأدوات مكتبية</title>
+        <meta name="description" content="أهلاً بكم في مكتبة الكرم، وجهتكم الأولى لأفضل أنواع القرطاسية والأدوات المكتبية والهندسية في العراق." />
+      </Helmet>
       <div dir='rtl' className='bg-light'>
         {/* Navbar */}
         <Navbar bg='white' expand='lg' className='shadow-sm sticky-top py-3'>
@@ -204,7 +213,9 @@ const App = () => {
         {/* cart */}
         <Cart show={show} handleClose={() => setShow(false)} />
         {/* Footer */}
-        <footer style={{width:"100vw"}} className='bg-dark text-white pt-5 pb-3'>
+        <footer
+          style={{ width: "100vw" }}
+          className='bg-dark text-white pt-5 pb-3'>
           <Container>
             <Row className='mb-4'>
               <Col md={6}>
@@ -224,14 +235,74 @@ const App = () => {
                 </div>
               </Col>
             </Row>
+
             <hr className='border-secondary' />
-            <p className='text-center text-secondary small'>
-             © {new Date().getFullYear()} جميع الحقوق محفوظة لمكتبة الكرم
-            </p>
+            <div className='d-flex flex-column align-items-center justify-content-center w-100 text-center'>
+              {/* السطر الأول: الحقوق والبرمجة */}
+              <div className='mb-3'>
+                <div className='text-secondary small mt-1'>
+                  تمت البرمجة بواسطة{" "}
+                  <span className='text-white fw-bold'>زيد حازم الطائي</span>
+                </div>
+              </div>
+
+              {/* السطر الثاني: أيقونات التواصل الاجتماعي */}
+              <div className='d-flex gap-3 justify-content-center'>
+                <a
+                  href='https://www.facebook.com/share/1Cxf95fEtq/'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-secondary hover-white'>
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href='https://www.instagram.com/zaidaltai5?igsh=ZGoxZ3ExY3hkY3Z0'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-secondary hover-white'>
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href='https://www.linkedin.com/in/zaid-altai-563972381/'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-secondary hover-white'>
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href='https://wa.me/96407870020515'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-secondary hover-white'>
+                  <MessageCircle size={20} />
+                </a>
+                <a
+                  href='https://t.me/zaid_5z'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-secondary hover-white'>
+                  <Send size={20} />
+                </a>
+              </div>
+            </div>
+               <div className='d-flex flex-column align-items-center justify-content-center w-100 text-center'>
+                <p className='text-secondary small mb-0'>
+                  © {new Date().getFullYear()} جميع الحقوق محفوظة لمكتبة الكرم
+                </p>
+                </div>
           </Container>
+
+          {/* تنسيق بسيط لتحويل اللون عند تمرير الماوس */}
+          <style>
+            {`
+          .hover-white:hover {
+            color: white !important;
+            transition: 0.3s;
+          }
+        `}
+          </style>
         </footer>
 
-       
         {/* Custom Styles for Hover Effect */}
         <style>{`
         .transition { transition: all 0.3s ease; }

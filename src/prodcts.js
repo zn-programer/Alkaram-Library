@@ -1,4 +1,5 @@
 /** @format */
+import { Helmet } from "react-helmet-async";
 import {
   Container,
   Row,
@@ -21,7 +22,7 @@ export default function Products({ sellectedCategory, setSellectedCategory }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showToast, setShowToast] = useState(false);
-  const [pName, setPName] = useState("");   //product name for toast
+  const [pName, setPName] = useState(""); //product name for toast
 
   const getProducts = () => {
     const productsRef = ref(db, "products");
@@ -73,7 +74,17 @@ export default function Products({ sellectedCategory, setSellectedCategory }) {
     );
   } else {
     return (
-      <Container  id='products' className='py-5' style={{ direction: "rtl", width:"100vw" }}>
+      <Container
+        id='products'
+        className='py-5'
+        style={{ direction: "rtl", width: "100vw" }}>
+        <Helmet>
+          <title>{`منتجات  - مكتبة الكرم`}</title>
+          <meta
+            name='description'
+            content={`اشتري الآن  بأفضل الأسعار من مكتبة الكرم. توصيل سريع لكل محافظات العراق.`}
+          />
+        </Helmet>
         <div className='d-flex align-items-center mb-5 border-end border-primary border-4 pe-3'>
           <ListOverlay
             sellectedCategory={sellectedCategory}
@@ -155,7 +166,11 @@ export default function Products({ sellectedCategory, setSellectedCategory }) {
           </Button>
         </div>
         {/* Add To Cart Toast */}
-        <AddToCartToast show={showToast} setShow={setShowToast} productName={pName}/>
+        <AddToCartToast
+          show={showToast}
+          setShow={setShowToast}
+          productName={pName}
+        />
         {/* Admin products management */}
 
         {/* <ProductManagement products={products} /> */}

@@ -22,7 +22,6 @@ function ListOverlay({ sellectedCategory, setSellectedCategory, getProducts }) {
             {...props}
             style={{
               position: "absolute",
-              padding: "2px 10px",
               color: "white",
               borderRadius: 3,
               zIndex: "10",
@@ -34,7 +33,6 @@ function ListOverlay({ sellectedCategory, setSellectedCategory, getProducts }) {
               className='shadow-sm sticky-top py-3'>
               <Container>
                 <Nav
-                  style={{ gap: "5px" }}
                   className='ms-auto me-4 fw-medium text-center'>
                   <Nav
                     style={{
@@ -195,11 +193,11 @@ function ListOverlay({ sellectedCategory, setSellectedCategory, getProducts }) {
 
 const listItemStyle = {
   background: "rgb(226, 220, 220)",
-  padding: "10px",
+  padding: "8px",
   color: "white",
   borderRadius: "10px",
   fontWeight: "bolder",
-  width: "100px",
+  width: "95px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
