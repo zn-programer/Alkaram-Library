@@ -1,4 +1,5 @@
 /** @format */
+import "./App.css";
 import { Helmet } from "react-helmet-async";
 import {
   Container,
@@ -102,16 +103,17 @@ export default function Products({ sellectedCategory, setSellectedCategory }) {
               className='mb-4 px-2 flex-shrink-0'>
               <Card className='h-100 border-0 shadow-sm hover-shadow transition'>
                 <Card.Img
+                  referrerPolicy='no-referrer'
                   variant='top'
                   src={product.imageUrl}
-                  className='object-fit-cover'
+                  className='object-fit-cover img'
                   style={{ height: "220px" }}
                 />
                 <Card.Body>
                   <Badge bg='primary-subtle' text='primary' className='mb-2'>
                     {product.category}
                   </Badge>
-                  <Card.Title className='fw-bold fs-6 text-truncate'>
+                  <Card.Title className='fw-bold fs-6 multi-line-truncate'>
                     {product.title}
                   </Card.Title>
                   <Card.Text className='text-primary fw-bold fs-5'>

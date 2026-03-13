@@ -102,7 +102,7 @@ const App = () => {
         <section
           id='hero'
           className='bg-primary text-white py-5 position-relative overflow-hidden'
-          style={{ backgroundImage: "url(/background.jpeg)" }}>
+          style={{ backgroundImage: "url(/background.webp)" }}>
           <Container
             className='py-5 text-center position-relative'
             style={{ zIndex: 2 }}>

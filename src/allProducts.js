@@ -69,7 +69,6 @@ const AllProductsModal = ({ show, handleClose, setCartItems, setShowToast, setPN
       <Modal.Header
         style={{ justifyContent: "space-around" }}
         className='border-bottom shadow-sm px-4 py-3 bg-white sticky-top'>
-        <ShoppingCart className='text-primary' />
         <Modal.Title className='fw-bold d-flex align-items-center gap-2'>
           جميع منتجات المكتبة
         </Modal.Title>
@@ -82,7 +81,7 @@ const AllProductsModal = ({ show, handleClose, setCartItems, setShowToast, setPN
       </Modal.Header>
       <Form.Control
         type='text'
-        placeholder='ابحث عن كتاب، قلم، أو حقيبة...'
+        placeholder='ابحث عن كتاب، قلم، أو ...'
         className='border-0 py-3 shadow-none text-end'
         style={{
           fontSize: "1rem",
@@ -112,7 +111,7 @@ const AllProductsModal = ({ show, handleClose, setCartItems, setShowToast, setPN
                     </Badge>
                   </div>
                   <Card.Body className='d-flex flex-column'>
-                    <Card.Title className='fw-bold fs-6 mb-1 text-truncate'>
+                    <Card.Title className='fw-bold fs-6 mb-1 multi-line-truncate'>
                       {product.title}
                     </Card.Title>
                     <Card.Text className='text-primary fw-bold mb-3'>

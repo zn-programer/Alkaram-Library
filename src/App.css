@@ -12,7 +12,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.img {
+  image-rendering: -webkit-optimize-contrast; /* يساعد المتصفحات القديمة على إظهار الصور بوضوح */
+  backface-visibility: hidden; /* يقلل من جهد المعالجة في الموبايل */
+}
+.multi-line-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* عدد الأسطر التي تريدها قبل ظهور النقاط */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.5em; /* اختياري: لتوحيد ارتفاع كل الكارتات */
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

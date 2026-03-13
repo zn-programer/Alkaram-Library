@@ -3,12 +3,12 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const OurWork = () => {
   const works = [
-    { id: 1, title: "تجليد فاخر", category: "كتب", img: "/tajleed.jpg" },
-    { id: 2, title: "طباعة بوسترات", category: "تصميم", img: "/poster.jpg" },
-    { id: 3, title: "تنسيق هدايا", category: "مناسبات", img: "/hadaya.jpg" },
-    { id: 4, title: "دفاتر مخصصة", category: "قرطاسية", img: "/dafater.jpg" },
-    { id: 5, title: "تغليف احترافي", category: "هدايا", img: "/gifts.jpg" },
-    { id: 6, title: "بوكيهات ورد", category: "تنسيق", img: "/pokes.jpg" },
+    { id: 1, title: "تجليد فاخر", category: "كتب", img: "/tajleed.webp" },
+    { id: 2, title: "طباعة بوسترات", category: "تصميم", img: "/poster.webp" },
+    { id: 3, title: "تنسيق هدايا", category: "مناسبات", img: "/hadaya.webp" },
+    { id: 4, title: "دفاتر مخصصة", category: "قرطاسية", img: "/dafater.webp" },
+    { id: 5, title: "تغليف احترافي", category: "هدايا", img: "/gifts.webp" },
+    { id: 6, title: "بوكيهات ورد", category: "تنسيق", img: "/pokes.webp" },
   ];
 
   return (

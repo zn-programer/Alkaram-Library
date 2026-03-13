@@ -198,6 +198,7 @@ const listItemStyle = {
   borderRadius: "10px",
   fontWeight: "bolder",
   width: "95px",
+  marginBottom:"5px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
