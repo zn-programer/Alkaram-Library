@@ -10,6 +10,7 @@ import {
   User,
   Phone,
   MapPin,
+  FileText,
 } from "lucide-react";
 import { CartContext } from "./cartContextAPI";
 
@@ -18,6 +19,7 @@ const Cart = ({ show, handleClose }) => {
     name: "",
     phone: "",
     address: "",
+    notes:"لا شيء",
   });
 
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -44,6 +46,7 @@ const Cart = ({ show, handleClose }) => {
       `👤 *الزبون:* ${info.name}\n` +
       `📞 *الهاتف:* ${info.phone}\n` +
       `📍 *العنوان:* ${info.address}\n` +
+      `📍 *ملاحظات:* ${info.notes}\n` +
       `--------------------------\n` +
       `📦 *المنتجات:*\n` +
       cartItems
@@ -217,6 +220,20 @@ const Cart = ({ show, handleClose }) => {
                   value={info.address}
                   onChange={(e) =>
                     setInfo({ ...info, address: e.target.value })
+                  }
+                />
+              </Form.Group>
+              <Form.Group className='mb-0'>
+                <div className='d-flex align-items-center gap-2 mb-1 small fw-bold text-secondary'>
+                  <FileText size={14} /> ملاحظات
+                </div>
+                <Form.Control
+                  type='text'
+                  placeholder='مثلا: ارسل لي الطلب غدا'
+                  className='rounded-3 border-0 shadow-sm px-3 py-2'
+                  value={info.notes}
+                  onChange={(e) =>
+                    setInfo({ ...info, notes: e.target.value })
                   }
                 />
               </Form.Group>

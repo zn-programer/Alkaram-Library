@@ -6,7 +6,7 @@ const Team = () => {
     { id: 1, name: "كرم محمد", role: "مدير المكتبة", img: "/karam.jpg" },
     { id: 2, name: "زيد الطائي", role: "مبرمج و مسؤول العمليات الالكترونية", img: "/zaid.webp" },
     { id: 3, name: "ضرغام", role: "مدير السوشل ميديا", img: "/durgham.jpeg"},
-    { id: 4, name: "عبدالرزاق داود", role: "خبير حاسبات و موضف مبيعات", img: "/razzaqimg.jpg" },
+    { id: 4, name: "عبدالرزاق داود", role: "خبير حاسبات و موظف مبيعات", img: "/razzaqimg.jpg" },
   ];
 
   return (
